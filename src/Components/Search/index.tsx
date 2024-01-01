@@ -34,7 +34,7 @@ const Search = () => {
         <div className={styles.search_component}>
             <div className={`${styles.search} ${focus ? styles.focus : ""}`}>
                 <div style={{marginLeft: "15px"}}>
-                    <Magnifying color="white" height="25" width="25"/>
+                    <Magnifying height="20px" width="20px" color={focus ? "white" : "black"} />
                 </div>
                 <Input
                     ref={searchInput}
