@@ -1,8 +1,8 @@
 type ToolsType = {
   title: string;
-  icon: JSX.Element;
+  icon: Component;
   list: ListType[];
-}[];
+};
 
 type ListType = {
   name: string;
