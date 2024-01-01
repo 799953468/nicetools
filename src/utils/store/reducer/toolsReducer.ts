@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 
 interface CounterState {
   screenRecord: ScreenRecordType;
@@ -10,7 +10,7 @@ const initialState: CounterState = {
     aspectRatio: "default",
     frameRate: "default",
     resolutions: "default",
-  },
+  }
 };
 
 export const toolsSlice = createSlice({

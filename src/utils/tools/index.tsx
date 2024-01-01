@@ -515,4 +515,4 @@ export default [
             },
         ],
     },
-] as ToolsType;
+] as ToolsType[];
