@@ -1,0 +1,22 @@
+.defaultLayout {
+  min-height : 100%;
+
+  .darkLayer {
+    position         : fixed;
+    pointer-events   : none;
+    background-color : rgba($color : #000000, $alpha : 0.3);
+    width            : 100%;
+    height           : 100%;
+    left             : 0;
+    top              : 0;
+    z-index          : 999;
+  }
+
+  .main {
+    box-sizing : border-box;
+    margin     : 0 auto;
+    max-width  : 62.5rem;
+    padding    : 0 1.25rem 1.25rem;
+    position   : relative;
+  }
+}
