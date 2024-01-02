@@ -1,0 +1,24 @@
+name: Tester
+
+on: [push, pull_request]
+
+jobs:
+  tester:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+      fail-fast: false
+    steps:
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+      - name: Install pnpm
+        with:
+          version: 8
+          run_install: false
+        uses: pnpm/action-setup@v2
+      - uses: actions/checkout@v4
+      - name: Install dependencies
+        run: pnpm install
+      - name: build
+        run: pnpm build

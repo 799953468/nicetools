@@ -24,3 +24,8 @@ dist-ssr
 *.sw?
 
 .env
+coverage/
+.nyc_output/
+pnpm-lock.yaml
+*.iml
+.vscode/

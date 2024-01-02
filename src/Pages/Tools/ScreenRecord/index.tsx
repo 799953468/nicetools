@@ -46,9 +46,8 @@ const ScreenRecord = () => {
     try {
       const displayMediaOptions = getDisplayMediaOptions(e);
 
-      mediaStream = await navigator.mediaDevices.getDisplayMedia(
-        displayMediaOptions
-      );
+      mediaStream =
+        await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
       // mediaStream.onaddtrack = function () {
       //   stop();
       // }.bind(this);
