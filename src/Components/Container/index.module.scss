@@ -1,100 +1,99 @@
 .container {
-  background-color : var(--bg);
-  border           : none;
-  border-radius    : 8px;
-  box-shadow       : 8px 14px 38px rgba(39, 44, 49, 0.06),
-  1px 3px 8px rgba(39, 44, 49, 0.03);
-  margin-bottom    : 50px;
-  margin-top       : 18px;
-  padding          : 25px 32px;
-  position         : relative;
+  background-color: var(--bg);
+  border: none;
+  border-radius: 8px;
+  box-shadow: 8px 14px 38px rgba(39, 44, 49, .06), 1px 3px 8px rgba(39, 44, 49, .03);
+  margin-bottom: 50px;
+  margin-top: 18px;
+  padding: 25px 32px;
+  position: relative;
 
   &.pt {
-    padding-top : 35px;
+    padding-top: 35px;
   }
 
   &.transparent {
-    background-color : rgba($color : #fff, $alpha : 0.65);
+    background-color: rgba($color: #fff, $alpha: .65);
   }
 
   &:last-child {
-    margin-bottom : 0;
+    margin-bottom: 0;
   }
 
   .title {
-    background-color : var(--theme);
-    border-radius    : 8px;
-    box-shadow       : 0 8px 10px rgba(36, 159, 253, 0.30196);
-    color            : #fff;
-    font-weight      : bold;
-    left             : 30px;
-    padding          : 8px 15px;
-    position         : absolute;
-    top              : -18px;
-    display          : flex;
-    align-items      : center;
+    background-color: var(--theme);
+    border-radius: 8px;
+    box-shadow: 0 8px 10px rgba(36, 159, 253, .30196);
+    color: #fff;
+    font-weight: bold;
+    left: 30px;
+    padding: 8px 15px;
+    position: absolute;
+    top: -18px;
+    display: flex;
+    align-items: center;
 
     .icon {
-      font-size    : 20px;
-      margin-right : 5px;
-      align-items  : center;
-      display      : flex;
+      font-size: 20px;
+      margin-right: 5px;
+      align-items: center;
+      display: flex;
     }
   }
 
   .tools {
     .toolsBtn {
-      position         : relative;
-      box-sizing       : border-box;
-      display          : inline-block;
-      margin           : 0.4375rem;
-      padding          : 0.625rem 0.9375rem;
-      font-size        : 1.125rem;
-      font-weight      : 700;
-      text-align       : center;
-      color            : var(--color-text);
-      letter-spacing   : .0625rem;
-      text-overflow    : ellipsis;
-      white-space      : nowrap;
-      overflow         : hidden;
-      background-color : transparent;
-      cursor           : pointer;
-      border-radius    : 0.25rem;
-      border           : none;
-      box-shadow       : 0 0.125rem 0.125rem 0 rgb(8 11 14 / 10%);
-      vertical-align   : top;
-      transform        : translateZ(0);
-      width            : calc(25% - 0.875rem);
+      position: relative;
+      box-sizing: border-box;
+      display: inline-block;
+      margin: .4375rem;
+      padding: .625rem .9375rem;
+      font-size: 1.125rem;
+      font-weight: 700;
+      text-align: center;
+      color: var(--color-text);
+      letter-spacing: .0625rem;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      background-color: transparent;
+      cursor: pointer;
+      border-radius: .25rem;
+      border: none;
+      box-shadow: 0 .125rem .125rem 0 rgb(8 11 14 / 10%);
+      vertical-align: top;
+      transform: translateZ(0);
+      width: calc(25% - .875rem);
 
       a {
-        color : var(--t1);
+        color: var(--t1);
       }
 
       &:hover {
-        color            : #fff;
-        transform        : translateY(-0.125rem);
-        box-shadow       : 0 0 0.0625rem 0 rgb(8 11 14 / 6%), 0 0.375rem 0.375rem -0.0625rem rgb(8 11 14 / 10%);
-        background-color : var(--theme);
-        transition       : transform .3s ease, background-color .1s ease, color .05s ease-out;
+        color: #fff;
+        transform: translateY(-.125rem);
+        box-shadow: 0 0 .0625rem 0 rgb(8 11 14 / 6%), 0 .375rem .375rem -.0625rem rgb(8 11 14 / 10%);
+        background-color: var(--theme);
+        transition: transform .3s ease, background-color .1s ease, color .05s ease-out;
 
         a {
-          color : #fff;
+          color: #fff;
         }
       }
     }
   }
 
-  @media (max-width : 600px) {
-    padding : 15px;
+  @media (max-width: 600px) {
+    padding: 15px;
     &.pt {
-      padding-top : 30px;
+      padding-top: 30px;
     }
     .nya-title {
-      left : 20px;
+      left: 20px;
     }
   }
 
   .list {
-    margin : 0;
+    margin: 0;
   }
 }
