@@ -1,0 +1,47 @@
+.pomodoroTechnique {
+  .item {
+    margin-bottom: 0;
+  }
+
+  .button {
+    margin-top: 15px;
+    margin-bottom: 0;
+  }
+}
+
+.box {
+  z-index: 1000;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all .3s ease;
+
+  .music {
+    cursor: pointer;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    font-size: 35px;
+    color: #ffffff;
+
+    &.paused {
+      opacity: .5;
+    }
+  }
+
+  .time {
+    transition: all .3s ease;
+  }
+
+  .cancel {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+  }
+}

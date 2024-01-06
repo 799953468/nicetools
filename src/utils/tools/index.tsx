@@ -1,9 +1,12 @@
 import React, { ReactNode, Suspense } from "react";
 import ScreenRecord from "@/Pages/Tools/ScreenRecord";
-import LayerGroup from "@/assets/icon/layer-group.svg?component";
-import Image from "@/assets/icon/image.svg?component";
-import Text from "@/assets/icon/text.svg?component";
-import Code from "@/assets/icon/code.svg?component";
+import PomodoroTechnique from "@/Pages/Tools/PomodoroTechnique";
+import {
+  AppstoreOutlined,
+  CodeOutlined,
+  FontSizeOutlined,
+  PictureFilled,
+} from "@ant-design/icons";
 
 const lazyLoad = (children: ReactNode): ReactNode => {
   return <Suspense>{children}</Suspense>;
@@ -12,7 +15,7 @@ const lazyLoad = (children: ReactNode): ReactNode => {
 export default [
   {
     title: "其他工具",
-    icon: <LayerGroup color="white" />,
+    icon: <AppstoreOutlined color="white" />,
     list: [
       {
         name: "网易云刷等级",
@@ -26,6 +29,7 @@ export default [
       {
         name: "番茄时钟",
         path: "/pomodoro_technique",
+        component: lazyLoad(<PomodoroTechnique />),
       },
       {
         name: "人生小格",
@@ -118,7 +122,7 @@ export default [
   },
   {
     title: "图片相关",
-    icon: <Image color="white" />,
+    icon: <PictureFilled color="white" />,
     list: [
       {
         name: "LINE 贴纸下载",
@@ -271,7 +275,7 @@ export default [
   },
   {
     title: "文字处理",
-    icon: <Text color="white" />,
+    icon: <FontSizeOutlined color="white" />,
     list: [
       {
         name: "文本对比",
@@ -346,7 +350,7 @@ export default [
   },
   {
     title: "编程开发",
-    icon: <Code color="white" />,
+    icon: <CodeOutlined color="white" />,
     list: [
       {
         name: "CSS 兼容性处理",

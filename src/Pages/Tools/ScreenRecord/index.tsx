@@ -123,45 +123,21 @@ const ScreenRecord = () => {
               name="aspectRatio"
               label={<Typography.Title level={5}>选择长宽比</Typography.Title>}
             >
-              <Select>
-                {aspectRatioList.map((item) => {
-                  return (
-                    <Select.Option key={item.value} value={item.value}>
-                      {item.label}
-                    </Select.Option>
-                  );
-                })}
-              </Select>
+              <Select options={aspectRatioList}></Select>
             </Form.Item>
             <Form.Item
               className={styles.item}
               name="frameRate"
               label={<Typography.Title level={5}>选择帧率</Typography.Title>}
             >
-              <Select>
-                {frameRateList.map((item) => {
-                  return (
-                    <Select.Option key={item.value} value={item.value}>
-                      {item.label}
-                    </Select.Option>
-                  );
-                })}
-              </Select>
+              <Select options={frameRateList} />
             </Form.Item>
             <Form.Item
               className={styles.item}
               name="resolutions"
               label={<Typography.Title level={5}>选择分辨率</Typography.Title>}
             >
-              <Select>
-                {resolutionsList.map((item) => {
-                  return (
-                    <Select.Option key={item.value} value={item.value}>
-                      {item.label}
-                    </Select.Option>
-                  );
-                })}
-              </Select>
+              <Select options={resolutionsList}></Select>
             </Form.Item>
             <Form.Item className={styles.button}>
               <Button type="primary" htmlType="submit">
