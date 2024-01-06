@@ -39,10 +39,12 @@ const PomodoroTechnique: React.FC = () => {
   const [progress, setProgress] = useState(0);
   const [time, setTime] = useState("");
   const [audioPaused, setAudioPaused] = useState(false);
+  const [interval, setIntervalState] = useState<NodeJS.Timeout | undefined>(
+    undefined,
+  );
   const data = useAppSelector((state) => state.tools.pomodoroTechnique);
   const dispatch = useAppDispatch();
   const audio: HTMLAudioElement = new Audio();
-  let interval: any = null;
   const handleFinish = async (e: PomodoroTechniqueType) => {
     dispatch(setPomodoroTechnique(e));
     start();
@@ -56,7 +58,8 @@ const PomodoroTechnique: React.FC = () => {
         provence: "/assets/audio/white-noise/preset_wakeup_provence.m4a",
       };
       audio.loop = true;
-      audio.src = audioSrc[data.musicType];
+      const key = data.musicType as keyof AudioSrc;
+      audio.src = audioSrc[key];
       audio.play();
       setAudioPaused(false);
     }
@@ -79,6 +82,7 @@ const PomodoroTechnique: React.FC = () => {
 
   const cancel = () => {
     clearInterval(interval);
+    setIntervalState(undefined);
     setShowBox(false);
     audio.pause();
   };
@@ -110,6 +114,7 @@ const PomodoroTechnique: React.FC = () => {
           rest = !rest;
         } else {
           clearInterval(interval);
+          setIntervalState(undefined);
           setSuccessful(true);
           setProgress(100);
           setTime("成功");
@@ -134,8 +139,7 @@ const PomodoroTechnique: React.FC = () => {
       past += 0.1;
     };
     check();
-    clearInterval(interval);
-    interval = setInterval(check, 100);
+    setIntervalState(setInterval(check, 100));
   };
 
   return (

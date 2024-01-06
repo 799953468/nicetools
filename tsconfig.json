@@ -13,7 +13,6 @@
     "useDefineForClassFields": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "suppressImplicitAnyIndexErrors": true,
     "noEmit": true,
     "baseUrl": "./",
     "paths": {
