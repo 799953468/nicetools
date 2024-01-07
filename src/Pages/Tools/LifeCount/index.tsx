@@ -27,7 +27,7 @@ const LifeCount: React.FC = () => {
     }
     const thisDay = dayjs();
     const deathDate = date.add(80, "year"); // 80岁的时候
-    let dateData: LifeCountDateTimeType = {
+    const dateData: LifeCountDateTimeType = {
       past: {
         year: thisDay.diff(date, "year", true).toFixed(1),
         month: thisDay.diff(date, "month", true).toFixed(1),
