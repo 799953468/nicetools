@@ -24,13 +24,8 @@ const musicList = [
 
 const PomodoroTechnique: React.FC = () => {
   useEffect(() => {
-    const listener = (e: BeforeUnloadEvent) => {
-      clearInterval(interval);
-      e.preventDefault();
-    };
-    window.addEventListener("beforeunload", listener);
     return () => {
-      window.removeEventListener("beforeunload", listener);
+      clearInterval(interval);
     };
   }, []);
   const boxRef = useRef<HTMLDivElement>(null);
